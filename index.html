@@ -2,35 +2,82 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Naoui Nour El Houda | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naoui Nour El Houda – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font-Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <h1>Naoui Nour El Houda</h1>
-    <p>Étudiante à ISET Radès | Passionnée par le développement web</p>
+  <nav class="nav">
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">NNH</a>
+      <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-content">
+      <img src="photo.jpg" alt="Photo" class="hero-img" onerror="this.src='https://via.placeholder.com/180'"/>
+      <h1>Naoui Nour El Houda</h1>
+      <p class="tagline">Développeuse web junior | UI enthusiast</p>
+      <div class="social">
+        <a href="https://github.com/NaouiNourElHouda" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:naouinourelhouda@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/naouinourelhouda" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
   </header>
 
-  <section>
-    <h2>Mon parcours</h2>
-    <ul>
-      <li>Diplôme : Licence appliquée en Informatique</li>
-      <li>Filière : Développement des Systèmes d'Information</li>
-      <li>Année d'obtention : 2025</li>
-    </ul>
-  </section>
+  <main class="container">
+    <section id="about">
+      <h2>À propos</h2>
+      <p>Étudiante en Développement des Systèmes d’Information à <strong>ISET Radès</strong>, passionnée par la création d’interfaces modernes et accessibles.</p>
+    </section>
 
-  <section>
-    <h2>Centres d'intérêt & Activités</h2>
-    <ul>
-      <li>Développement web front-end</li>
-      <li>Design UI/UX</li>
-      <li>Membre du club Google Developer Student Clubs (GDSC)</li>
-    </ul>
-  </section>
+    <section id="skills">
+      <h2>Compétences</h2>
+      <div class="skills-grid">
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">Bootstrap</span>
+        <span class="skill">Figma</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projets</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Portfolio v1</h3>
+          <p>Site statique responsive hébergé sur GitHub Pages.</p>
+          <a href="https://github.com/NaouiNourElHouda/portfolio" target="_blank">Voir code <i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <!-- Ajoute d'autres projets ici -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>naouinourelhouda@gmail.com</p>
+    </section>
+  </main>
 
   <footer>
-    <p>Contact : <a href="mailto:naouinourelhouda@gmail.com">naouinourelhouda@gmail.com</a></p>
+    <p>&copy; <span id="year"></span> Naoui Nour El Houda. Tous droits réservés.</p>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
